@@ -16,7 +16,6 @@ The project is fully containerized with **Docker** for easy local and cloud depl
 - [Overview](#overview)
 - [Screenshots](#screenshots)
 - [Key Features](#key-features)
-- [Architecture & Tech Stack](#architecture--tech-stack)
 - [Prerequisites](#prerequisites)
 - [Local Setup (Virtualenv)](#local-setup-virtualenv)
 - [Running with Docker](#running-with-docker)
@@ -52,20 +51,6 @@ WaveStream started as a classic Django music library project and was rebuilt int
 - **❤️ Instant AJAX Favorites**: One-click async favoriting for tracks and albums without page reloads.
 - **👥 Role-Based Access Control**: Creator/Artist accounts manage albums and uploads; Listener accounts browse, stream, and favorite.
 - **🐳 Dockerized & Cloud Ready**: Production Gunicorn + WhiteNoise static compression with automatic PostgreSQL / SQLite switching and automated demo seeding.
-
-
----
-
-## Architecture & Tech Stack
-
-| Layer | Technology | Details |
-|---|---|---|
-| **Backend** | Python 3.11+, Django 5.x | MTV architecture, class-based views, Django Auth & ModelForms |
-| **WSGI Server** | Gunicorn | Multi-worker HTTP server for production container runtime |
-| **Static Serving** | WhiteNoise | Compressed, manifest-backed static asset delivery without an Nginx sidecar |
-| **Database** | SQLite / PostgreSQL | Local file database with seamless `DATABASE_URL` PostgreSQL support |
-| **Frontend** | Vanilla JavaScript (ES6+), HTML5, CSS3 | Custom dark glassmorphic theme, Web Audio API tone synthesis, zero heavy JS frameworks |
-| **Container** | Docker & Docker Compose | Lightweight `python:3.11-slim` image, multi-arch support, non-buffered logging |
 
 ---
 
